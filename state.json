@@ -1,1 +1,25 @@
-{}
+{
+  "last_alert": {},
+  "zones": {
+    "BTC": {
+      "funding": "mid",
+      "kimp": "mid",
+      "rsi": "mid"
+    },
+    "ETH": {
+      "funding": "mid",
+      "kimp": "mid",
+      "rsi": "mid"
+    },
+    "SOL": {
+      "funding": "mid",
+      "kimp": "mid",
+      "rsi": "mid"
+    },
+    "XRP": {
+      "funding": "mid",
+      "kimp": "mid",
+      "rsi": "mid"
+    }
+  }
+}
