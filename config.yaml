@@ -1,0 +1,44 @@
+# ─────────────────────────────────────────────
+# 코인 알리미 설정 파일
+# GitHub 웹에서 이 파일을 수정(✏️)하고 Commit 하면 다음 실행부터 바로 반영됩니다.
+# ─────────────────────────────────────────────
+
+# 감시할 코인 (업비트 원화마켓 심볼)
+coins:
+  - BTC
+  - ETH
+  - XRP
+  - SOL
+
+# 같은 코인의 같은 신호는 이 시간(분) 동안 다시 보내지 않음
+cooldown_minutes: 180
+
+# RSI (1시간봉) — 과매도/과매수 구간에 "진입"할 때 알림
+rsi:
+  enabled: true
+  period: 14
+  oversold: 30     # 이 값 아래로 내려가면 🟢
+  overbought: 70   # 이 값 위로 올라가면 🔴
+
+# 급등/급락 — 최근 N분 동안 가격이 ±X% 이상 움직이면 알림
+price_change:
+  enabled: true
+  window_minutes: 60   # 5의 배수
+  threshold_pct: 3.0
+
+# 이동평균 골든/데드크로스 (1시간봉)
+ma_cross:
+  enabled: true
+  short: 20
+  long: 60
+
+# 거래량 급증 — 직전 1시간 거래량이 최근 N시간 평균의 몇 배 이상이면 알림
+volume_spike:
+  enabled: true
+  lookback: 20
+  multiplier: 3.0
+
+# 매일 요약 메시지 (한국시간 기준 이 시각 이후 첫 실행 때 1회)
+daily_summary:
+  enabled: true
+  hour_kst: 9

@@ -1,0 +1,58 @@
+name: coin-alert
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"   # 5분마다 (GitHub 사정에 따라 몇 분 지연될 수 있음)
+  workflow_dispatch:
+    inputs:
+      test:
+        description: "테스트 메시지 보내기 (현재 상태를 즉시 전송)"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: coin-alert
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Check market & send alerts
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TEST_MODE: ${{ github.event_name == 'workflow_dispatch' && inputs.test }}
+        run: |
+          if [ "$TEST_MODE" = "true" ]; then
+            python alert.py --test
+          else
+            python alert.py
+          fi
+
+      - name: Save alert state
+        run: |
+          if git diff --quiet -- state.json; then
+            echo "state 변경 없음"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add state.json
+          git commit -m "chore: update alert state"
+          git pull --rebase --autostash
+          git push
