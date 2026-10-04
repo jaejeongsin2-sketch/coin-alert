@@ -1,10 +1,13 @@
 {
-  "last_alert": {},
+  "last_alert": {
+    "BTC:rsi_high": "2026-10-05T07:04:46+09:00",
+    "XRP:rsi_high": "2026-10-05T07:04:46+09:00"
+  },
   "zones": {
     "BTC": {
       "funding": "mid",
       "kimp": "mid",
-      "rsi": "mid"
+      "rsi": "high"
     },
     "ETH": {
       "funding": "mid",
@@ -19,7 +22,7 @@
     "XRP": {
       "funding": "mid",
       "kimp": "mid",
-      "rsi": "mid"
+      "rsi": "high"
     }
   }
 }
