@@ -32,11 +32,38 @@ ma_cross:
   short: 20
   long: 60
 
-# 거래량 급증 — 직전 1시간 거래량이 최근 N시간 평균의 몇 배 이상이면 알림
+# 🇰🇷 업비트(국내) 거래량 급증 — 직전 1시간 거래량이 최근 N시간 평균의 몇 배 이상이면 알림
 volume_spike:
   enabled: true
   lookback: 20
   multiplier: 3.0
+
+# 🐋 바이낸스(글로벌) 거래량 급증 + 매수/매도 방향
+#   시장가 매수 비율 = 시장가 매수 거래대금 / 전체 거래대금 (0.5 = 중립)
+binance_volume:
+  enabled: true
+  lookback: 20
+  multiplier: 3.0
+  buy_strong: 0.55    # 이 이상이면 "매수세 우위"
+  sell_strong: 0.45   # 이 이하면 "매도세 우위"
+
+# 🌶️ 김치 프리미엄 = 업비트 가격 / (바이낸스 가격 × 환율) - 1
+kimchi_premium:
+  enabled: true
+  high_pct: 5.0    # 이 이상 진입 시 과열 알림
+  low_pct: -1.0    # 이 이하 진입 시 역프리미엄 알림
+
+# 🔥 펀딩비 (OKX 무기한 선물, 1회 기준 %)  보통 0.01% 근처가 중립
+funding_rate:
+  enabled: true
+  high_pct: 0.05   # 롱 과열
+  low_pct: -0.03   # 숏 과열
+
+# 📊 미결제약정(OI) 급변 (OKX 무기한 선물)
+open_interest:
+  enabled: true
+  window_hours: 1
+  threshold_pct: 3.0
 
 # 매일 요약 메시지 (한국시간 기준 이 시각 이후 첫 실행 때 1회)
 daily_summary:
