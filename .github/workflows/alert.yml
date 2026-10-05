@@ -8,7 +8,7 @@ on:
       test:
         description: "테스트 메시지 보내기 (현재 상태를 즉시 전송)"
         type: boolean
-        default: true
+        default: false
 
 permissions:
   contents: write
