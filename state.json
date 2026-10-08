@@ -2,34 +2,36 @@
   "last_alert": {
     "BTC:bn_volume": "2026-10-06T00:19:26+09:00",
     "BTC:rsi_high": "2026-10-05T07:04:46+09:00",
-    "BTC:rsi_low": "2026-10-08T13:21:22+09:00",
+    "BTC:rsi_low": "2026-10-09T02:59:14+09:00",
     "BTC:volume": "2026-10-05T09:53:59+09:00",
-    "ETH:rsi_low": "2026-10-08T13:21:22+09:00",
-    "SOL:rsi_low": "2026-10-08T13:21:22+09:00",
+    "ETH:rsi_low": "2026-10-09T02:59:14+09:00",
+    "ETH:volume": "2026-10-09T02:59:14+09:00",
+    "SOL:rsi_low": "2026-10-09T02:59:14+09:00",
+    "SOL:volume": "2026-10-09T02:59:14+09:00",
     "XRP:rsi_high": "2026-10-05T07:04:46+09:00",
-    "XRP:rsi_low": "2026-10-08T13:21:22+09:00"
+    "XRP:rsi_low": "2026-10-09T02:59:14+09:00"
   },
   "last_summary": "2026-10-08",
   "zones": {
     "BTC": {
       "funding": "mid",
       "kimp": "mid",
-      "rsi": "mid"
+      "rsi": "low"
     },
     "ETH": {
       "funding": "mid",
       "kimp": "mid",
-      "rsi": "mid"
+      "rsi": "low"
     },
     "SOL": {
       "funding": "mid",
       "kimp": "mid",
-      "rsi": "mid"
+      "rsi": "low"
     },
     "XRP": {
       "funding": "mid",
       "kimp": "mid",
-      "rsi": "mid"
+      "rsi": "low"
     }
   }
 }
