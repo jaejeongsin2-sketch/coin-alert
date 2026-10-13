@@ -12,7 +12,7 @@
     "XRP:rsi_high": "2026-10-05T07:04:46+09:00",
     "XRP:rsi_low": "2026-10-13T02:47:39+09:00"
   },
-  "last_summary": "2026-10-12",
+  "last_summary": "2026-10-13",
   "zones": {
     "BTC": {
       "funding": "mid",
@@ -22,17 +22,17 @@
     "ETH": {
       "funding": "mid",
       "kimp": "mid",
-      "rsi": "low"
+      "rsi": "mid"
     },
     "SOL": {
       "funding": "mid",
       "kimp": "mid",
-      "rsi": "low"
+      "rsi": "mid"
     },
     "XRP": {
       "funding": "mid",
       "kimp": "mid",
-      "rsi": "low"
+      "rsi": "mid"
     }
   }
 }
