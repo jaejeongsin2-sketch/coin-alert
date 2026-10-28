@@ -29,17 +29,17 @@
     "BTC": {
       "funding": "mid",
       "kimp": "mid",
-      "rsi": "high"
+      "rsi": "mid"
     },
     "ETH": {
       "funding": "mid",
       "kimp": "mid",
-      "rsi": "high"
+      "rsi": "mid"
     },
     "SOL": {
       "funding": "mid",
       "kimp": "mid",
-      "rsi": "high"
+      "rsi": "mid"
     },
     "XRP": {
       "funding": "mid",
