@@ -29,7 +29,7 @@
     "BTC": {
       "funding": "mid",
       "kimp": "mid",
-      "rsi": "low"
+      "rsi": "mid"
     },
     "ETH": {
       "funding": "mid",
@@ -39,7 +39,7 @@
     "SOL": {
       "funding": "mid",
       "kimp": "mid",
-      "rsi": "low"
+      "rsi": "mid"
     },
     "XRP": {
       "funding": "mid",
