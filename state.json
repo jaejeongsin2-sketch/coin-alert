@@ -2,12 +2,12 @@
   "last_alert": {
     "BTC:bn_volume": "2026-10-26T23:14:56+09:00",
     "BTC:golden": "2026-11-01T18:47:30+09:00",
-    "BTC:rsi_high": "2026-10-28T11:36:51+09:00",
+    "BTC:rsi_high": "2026-11-05T03:46:48+09:00",
     "BTC:rsi_low": "2026-11-04T12:22:05+09:00",
     "BTC:volume": "2026-10-27T17:35:40+09:00",
     "ETH:bn_volume": "2026-10-25T00:52:11+09:00",
     "ETH:dead": "2026-10-23T01:17:06+09:00",
-    "ETH:rsi_high": "2026-10-28T17:59:31+09:00",
+    "ETH:rsi_high": "2026-11-05T03:46:48+09:00",
     "ETH:rsi_low": "2026-10-30T11:51:32+09:00",
     "ETH:volume": "2026-10-30T11:51:32+09:00",
     "SOL:bn_volume": "2026-10-25T00:52:11+09:00",
@@ -29,12 +29,12 @@
     "BTC": {
       "funding": "mid",
       "kimp": "mid",
-      "rsi": "mid"
+      "rsi": "high"
     },
     "ETH": {
       "funding": "mid",
       "kimp": "mid",
-      "rsi": "mid"
+      "rsi": "high"
     },
     "SOL": {
       "funding": "mid",
