@@ -36,7 +36,7 @@
     "ETH": {
       "funding": "mid",
       "kimp": "mid",
-      "rsi": "low"
+      "rsi": "mid"
     },
     "SOL": {
       "funding": "mid",
