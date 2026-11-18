@@ -50,7 +50,7 @@
     "XRP": {
       "funding": "mid",
       "kimp": "mid",
-      "rsi": "high"
+      "rsi": "mid"
     }
   }
 }
